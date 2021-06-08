@@ -33,8 +33,9 @@ export default class Snake {
         if (this.apple.x === x && this.apple.y === y) {
             this.placeApple();
             this.body.push(
-                this.scene.add.rectangle(0, 0, this.tileSize, this.tileSize, 0xffffff).setOrigin(0)
+                this.scene.add.rectangle(0, 0, this.tileSize, this.tileSize, 0xff0000).setOrigin(0)
             );
+            this.moveInterval -= 15;
         }
     }
 
